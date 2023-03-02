@@ -1,0 +1,80 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+  font-size: 2vh;
+  font-family: 'Poppins';
+  background: #3E3F4C;
+  box-sizing: border-box;
+}
+
+.box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex: 8;
+  justify-content: center;
+  align-items: center;
+  background: #3E3F4C;
+  color: #BE98AA;
+  border-radius: 0 0 20px 20px;
+}
+
+.name {
+  font-size: 4rem;
+}
+
+.bio {
+  transition: all 1s;
+}
+
+.bio.pre-animation {
+  opacity: 0;
+}
+
+.header {
+  flex: 1;
+  width: 100%;
+  padding: 10px 20px ;
+}
+.navbar {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  width: 100%;
+  background: #BE98AA;
+  border-radius: 5% 5% 0 0;
+}
+
+.projects {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-container {
+    flex: 3;
+  }
+  .navbar {
+    flex: 2;
+    width: 100%;
+    border-radius: 20% 20% 0 0;
+  }
+}
+
