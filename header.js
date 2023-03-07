@@ -11,12 +11,11 @@ goBack.id = "back";
 goBack.className = "fas fa-door-open";
 
 const navHeader = document.querySelector(".header");
-if (document.URL != "http://localhost:3000/") {
+if (document.URL.includes('about') || document.URL.includes('project')) {
   navHeader.appendChild(goBack);
 }
 navHeader.appendChild(githubLink);
 navHeader.appendChild(themeChanger);
-console.log(document.URL);
 
 function changeTheme() {
   if (themeChanger.className.includes("fa-moon")) {

@@ -3,15 +3,19 @@ const about = document.querySelector(".about");
 const bio = document.querySelector(".bio");
 
 const showProjects = () => {
-  window.open('./projects.html', '_self')
+  window.open('./projects.html')
+  print()
 };
 
+const goToAbout = () => {
+  window.open('./about.html', '_self')
+};
 // observer = new MutationObserver((mutationsList, observer) => {
 //   console.log(mutationsList);
 // })
 // observer.observe(bio, {characterData: false, childList: true, attributes: false})
 
-const bios = ["University of Toronto", "Albert Campbell"];
+const bios = ["University of Toronto", "Wait For It", "I'm Your Dad"];
 const changeBio = () => {
   bio.classList.add("pre-animation");
   setTimeout(() => {
@@ -27,5 +31,5 @@ const changeBio = () => {
 
 setInterval(changeBio, 5000);
 project.addEventListener("click", showProjects);
-about.addEventListener("click", showProjects);
+about.addEventListener("click", goToAbout);
 
