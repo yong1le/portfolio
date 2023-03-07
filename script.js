@@ -4,7 +4,6 @@ const bio = document.querySelector(".bio");
 
 const showProjects = () => {
   window.open('./projects.html')
-  print()
 };
 
 const goToAbout = () => {
