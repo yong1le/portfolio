@@ -3,7 +3,7 @@ const about = document.querySelector(".about");
 const bio = document.querySelector(".bio");
 
 const showProjects = () => {
-  window.open('./projects.html')
+  window.open('./projects.html', '_self')
 };
 
 const goToAbout = () => {
