@@ -23,7 +23,7 @@ const MainProject = ({
     <div
       className={`${
         dir === "LEFT" ? "xl:flex-row" : "xl:flex-row-reverse"
-      } my-32 sm:my-72 flex flex-col justify-between gap-10`}
+      } py-32 sm:py-72 flex flex-col justify-between gap-10`}
     >
       <div className="flex flex-col xl:w-1/2">
         <div>
