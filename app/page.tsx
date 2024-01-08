@@ -117,7 +117,7 @@ const projects = [
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="inset-0">
       <div className="flex h-screen items-center bg-accent p-3 text-white sm:justify-center sm:p-0">
         <div>
           <p>Hi, my name is</p>
@@ -151,6 +151,8 @@ const Home = () => {
             />
           ))}
       </div>
+
+
     </div>
   );
 };
