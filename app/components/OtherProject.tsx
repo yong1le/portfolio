@@ -1,24 +1,29 @@
 import Image from "next/image";
+import SourceButton from "./SourceButton";
+import DemoButton from "./DemoButton";
 
 const OtherProject = ({
   title,
   description,
   sourceURL,
   demoURL,
-  image,
 }: {
   title: string;
   description: string;
   sourceURL: string;
   demoURL: string;
-  image: string;
 }) => {
   return (
-    <div className="relative h-[300px] border rounded-xl">
-      <Image src={image || "/"} fill={true} alt="Project Image" />
-      <div className="absoute bottom-0 left-0 bg-black">
-        <h2>{title}</h2>
+    <div className="flex flex-col justify-between rounded-xl border-white 
+      bg-white p-4 text-black transition-all hover:scale-105 gap-4 
+      ">
+      <div>
+        <h1 className="mb-3 font-bold lg:text-2xl">{title}</h1>
         <p className="text-xs">{description}</p>
+      </div>
+      <div className="flex flex-row flex-wrap justify-center gap-1">
+        {sourceURL && <SourceButton href={sourceURL} />}
+        {demoURL && <DemoButton href={demoURL} />}
       </div>
     </div>
   );

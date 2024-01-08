@@ -76,7 +76,7 @@ const OtherProjectsSection = ({
           </div>
         ))}
       </div>
-      <div className="transition-all grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-10 transition-all grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {projects
           .filter(filterQuery)
           .map((e, i) => (
@@ -86,7 +86,6 @@ const OtherProjectsSection = ({
               description={e.description}
               sourceURL={e.sourceURL}
               demoURL={e.demoURL}
-              image={e.image}
             />
           )) || <div>Nothing here</div>}
       </div>

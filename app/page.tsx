@@ -59,7 +59,7 @@ const projects = [
     tags: ["Mockito", "JUnit", "GIT", "Android", "Firebase"],
     sourceURL: "https://github.com/michaelz04/Mall-App",
     demoURL: "",
-    image: "",
+    image: "/images/mall.png",
     main: true,
   },
   {
@@ -142,6 +142,7 @@ const skills = [
   "Android",
   "Web",
   "Auth",
+  "Content Management"
 ];
 
 const Home = () => {
@@ -180,7 +181,7 @@ const Home = () => {
 
       <div className="flex min-h-screen flex-col items-center justify-center py-10 text-white">
         <h1 className="pb-3 text-xl font-bold sm:text-4xl">All Projects</h1>
-        <p className="pb-3">Hint: Select a skill to query the projects!</p>
+        <p className="pb-3 text-center">Hint: Select a skill to query the projects!</p>
         <OtherProjectsSection skills={skills} projects={projects} />
       </div>
     </div>
