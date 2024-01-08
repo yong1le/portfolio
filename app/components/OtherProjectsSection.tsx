@@ -3,13 +3,23 @@
 import { useState } from "react";
 import SkillIcons from "./SkillIcons";
 import { FaTimes } from "react-icons/fa";
+import OtherProject from "./OtherProject";
 
 const OtherProjectsSection = ({
   skills,
   projects,
 }: {
   skills: string[];
-  projects: any[];
+  projects: {
+    title: string;
+    description: string;
+    highlightTags: string[];
+    tags: string[];
+    sourceURL: string;
+    demoURL: string;
+    image: string;
+    main: boolean;
+  }[];
 }) => {
   const [query, setQuery] = useState<string[]>([]);
 
@@ -21,9 +31,23 @@ const OtherProjectsSection = ({
     setQuery(query.filter((e) => e !== skill));
   };
 
+  const filterQuery = (project: any) => {
+    for (let i = 0; i < query.length; i++) {
+      if (
+        !(
+          project.tags.includes(query[i]) ||
+          project.highlightTags.includes(query[i])
+        )
+      ) {
+        return false;
+      }
+    }
+    return true;
+  };
+
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex flex-row flex-wrap items-center justify-center gap-1 sm:w-3/4 lg:w-1/2">
+    <div className="flex flex-col items-center sm:w-3/4 lg:w-1/2 p-2 transition-all">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-1">
         {skills.map((e, i) => (
           <div key={i}>
             {query.includes(e) ? (
@@ -51,6 +75,20 @@ const OtherProjectsSection = ({
             )}
           </div>
         ))}
+      </div>
+      <div className="transition-all grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        {projects
+          .filter(filterQuery)
+          .map((e, i) => (
+            <OtherProject
+              key={i}
+              title={e.title}
+              description={e.description}
+              sourceURL={e.sourceURL}
+              demoURL={e.demoURL}
+              image={e.image}
+            />
+          )) || <div>Nothing here</div>}
       </div>
     </div>
   );

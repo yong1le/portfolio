@@ -13,9 +13,9 @@ const projects = [
     title: "Thomp",
     description: `
       A full stack social media platform built using a Next.js and JavaScript
-      frontend coupled with a dedicated Golang backend. The app features secure
-      JWT-based server authentication and uses Supabase services for database
-      and storage hosting. See the link before for a demo.
+      frontend coupled with a dedicated Golang backend. The app features
+      JWT-based server authentication and uses Supabase services for cloud database
+      and storage hosting.
     `,
     highlightTags: ["NextJS", "Golang", "Supabase", "Auth"],
     tags: [
@@ -31,7 +31,7 @@ const projects = [
     ],
     sourceURL: "https://github.com/yong1le/thomp",
     demoURL: "https://thomp.vercel.app/home",
-    image: "",
+    image: "/images/thomp.gif",
     main: true,
   },
   {
@@ -45,7 +45,7 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript", "ReactJS", "TailwindCSS", "GIT", "Web"],
     sourceURL: "https://github.com/yong1le/utscacf-website",
     demoURL: "https://utscacf.vercel.app/home",
-    image: "",
+    image: "/images/acf.png",
     main: true,
   },
   {
@@ -181,7 +181,7 @@ const Home = () => {
       <div className="flex min-h-screen flex-col items-center justify-center py-10 text-white">
         <h1 className="pb-3 text-xl font-bold sm:text-4xl">All Projects</h1>
         <p className="pb-3">Hint: Select a skill to query the projects!</p>
-        <OtherProjectsSection skills={skills} projects={projects}/>
+        <OtherProjectsSection skills={skills} projects={projects} />
       </div>
     </div>
   );

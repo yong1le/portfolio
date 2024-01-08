@@ -1,3 +1,4 @@
+import Image from "next/image";
 import DemoButton from "./DemoButton";
 import SkillIcons from "./SkillIcons";
 import SourceButton from "./SourceButton";
@@ -23,7 +24,7 @@ const MainProject = ({
     <div
       className={`${
         dir === "LEFT" ? "xl:flex-row" : "xl:flex-row-reverse"
-      } py-32 sm:py-72 flex flex-col justify-between gap-10`}
+      } flex flex-col justify-between gap-10 py-32 sm:py-72`}
     >
       <div className="flex flex-col xl:w-1/2">
         <div>
@@ -45,8 +46,15 @@ const MainProject = ({
           {demoURL && <DemoButton href={demoURL} />}
         </div>
       </div>
-      <div className="flex justify-center items-center">
-        <div className="rounded-2xl border-8 border-accent h-[200px] w-[250px] sm:h-[400px] sm:w-[600px]"></div>
+      <div className="flex items-center justify-center">
+        <div className="h-[200px] relative w-[250px] sm:h-[400px] sm:w-[600px]">
+          <Image
+            className="rounded-2xl border-[8px] border-accent object-fill"
+            src={image || "/"}
+            fill={true}
+            alt="Project Image"
+          />
+        </div>
       </div>
     </div>
   );
