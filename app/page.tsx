@@ -1,6 +1,7 @@
-import { IoCaretDownOutline } from "react-icons/io5";
+import { IoCaretDownOutline, IoCaretUpOutline } from "react-icons/io5";
 import Description from "./components/Description";
 import MainProject from "./components/MainProject";
+import OtherProjectsSection from "./components/OtherProjectsSection";
 
 const descriptions = [
   "A computer science student at the University of Toronto",
@@ -115,27 +116,49 @@ const projects = [
   },
 ];
 
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "SQL",
+  "Python",
+  "Java",
+  "C",
+  "C++",
+  "Bash",
+  "Golang",
+  "ReactJS",
+  "NodeJS",
+  "TailwindCSS",
+  "Flask",
+  "Pandas",
+  "Matplotlib",
+  "GIT",
+  "Firebase",
+  "Supabase",
+  "PostgreSQL",
+  "MongoDB",
+  "Android",
+  "Web",
+  "Auth",
+];
+
 const Home = () => {
   return (
     <div className="inset-0">
-      <div className="flex h-screen items-center bg-accent p-3 text-white sm:justify-center sm:p-0">
+      <div className="flex h-screen items-center p-3 text-white sm:justify-center sm:p-0">
         <div>
           <p>Hi, my name is</p>
           <h1 className="py-4 text-3xl font-bold sm:text-6xl">Yong Le He</h1>
           <Description descriptions={descriptions} />
         </div>
-
-        <div
-          className={`absolute bottom-0 left-0 flex h-20 w-full items-center
-          justify-center rounded-t-[40px] bg-white text-accent`}
-        >
-          <div className={`animate-pulse`}>
-            <IoCaretDownOutline className="h-6 w-full" />
-          </div>
-        </div>
       </div>
 
-      <div className="px-10 lg:px-48">
+      <div className="rounded-[40px] bg-white px-10 py-10 text-black lg:px-48">
+        <div className={`animate-pulse text-accent`}>
+          <IoCaretDownOutline className="h-6 w-full" />
+        </div>
         {projects
           .filter((e) => e.main)
           .map((e, i) => (
@@ -150,9 +173,16 @@ const Home = () => {
               dir={i % 2 == 0 ? "LEFT" : "RIGHT"}
             />
           ))}
+        <div className={`animate-pulse text-accent`}>
+          <IoCaretUpOutline className="h-6 w-full" />
+        </div>
       </div>
 
-
+      <div className="flex min-h-screen flex-col items-center justify-center py-10 text-white">
+        <h1 className="pb-3 text-xl font-bold sm:text-4xl">All Projects</h1>
+        <p className="pb-3">Hint: Select a skill to query the projects!</p>
+        <OtherProjectsSection skills={skills} projects={projects}/>
+      </div>
     </div>
   );
 };

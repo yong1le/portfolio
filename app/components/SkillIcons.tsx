@@ -1,11 +1,15 @@
 import {
+  SiC,
+  SiCplusplus,
   SiCss3,
   SiFirebase,
   SiFlask,
   SiGit,
+  SiGnubash,
   SiHtml5,
   SiJavascript,
   SiJunit5,
+  SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
   SiPandas,
@@ -21,6 +25,7 @@ import { MdManageAccounts } from "react-icons/md";
 import { HiOutlineStatusOnline } from "react-icons/hi";
 import { GiQuickSlash } from "react-icons/gi";
 import { GrTest } from "react-icons/gr";
+import { ImFileEmpty } from "react-icons/im";
 
 const SkillIcons = ({ skill }: { skill: string }) => {
   let skillIcon;
@@ -98,14 +103,26 @@ const SkillIcons = ({ skill }: { skill: string }) => {
     case "NodeJS":
       skillIcon = <SiNodedotjs />;
       break;
+    case "C":
+      skillIcon = <SiC />;
+      break;
+    case "C++":
+      skillIcon = <SiCplusplus />;
+      break;
+    case "Bash":
+      skillIcon = <SiGnubash />;
+      break;
+    case "MongoDB":
+      skillIcon = <SiMongodb />;
+      break;
     default:
-      skillIcon = <></>;
+      skillIcon = <ImFileEmpty/>;
   }
 
   return (
-    <div className="flex flex-row gap-2">
+    <div className="flex flex-row items-center gap-2">
       {skillIcon}
-      {skill}
+      <p>{skill}</p>
     </div>
   );
 };
