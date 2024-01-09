@@ -26,7 +26,7 @@ const Home = () => {
         <IntroSection descriptions={descriptions} />
       </div>
 
-      <div className="rounded-t-[40px] bg-white px-10 py-8 text-black lg:px-48">
+      <div className="rounded-t-[40px] bg-white px-10 pt-8 text-black lg:px-48">
         <MainProjectSection projects={projects} />
       </div>
 
