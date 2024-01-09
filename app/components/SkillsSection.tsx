@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import SkillIcons from "./SkillIcons";
 import { FaTimes } from "react-icons/fa";
 import OtherProject from "./OtherProject";
@@ -10,28 +10,21 @@ const SkillsSection = ({
   projects,
 }: {
   skills: string[];
-  projects: {
-    title: string;
-    description: string;
-    highlightTags: string[];
-    tags: string[];
-    sourceURL: string;
-    demoURL: string;
-    image: string;
-    main: boolean;
-  }[];
+  projects: ProjectType[];
 }) => {
   const [query, setQuery] = useState<string[]>([]);
+  const projectsArea = useRef<HTMLDivElement>(null);
 
   const addToQuery = (skill: string) => {
     setQuery([...query, skill]);
   };
 
   const removeFromQuery = (skill: string) => {
-    setQuery(query.filter((e) => e !== skill));
+    setQuery(
+      query.filter((e) => e !== skill));
   };
 
-  const filterQuery = (project: any) => {
+  const filterQuery = (project: ProjectType) => {
     for (let i = 0; i < query.length; i++) {
       if (
         !(
@@ -48,7 +41,7 @@ const SkillsSection = ({
   return (
     <div className="flex flex-col items-center p-2 transition-all sm:w-3/4 lg:w-2/3">
       <div className="flex flex-row flex-wrap items-center justify-center gap-1">
-        {skills.map((e, i) => (
+        {skills && skills.map((e, i) => (
           <div key={i}>
             {query.includes(e) ? (
               <div
@@ -76,7 +69,10 @@ const SkillsSection = ({
           </div>
         ))}
       </div>
-      <div className="mt-10 grid grid-cols-1 gap-4 transition-all sm:grid-cols-2 xl:grid-cols-3">
+      <div
+        ref={projectsArea}
+        className="mt-10 grid grid-cols-1 gap-4 transition-all sm:grid-cols-2 xl:grid-cols-3"
+      >
         {projects
           .filter(filterQuery)
           .map((e, i) => (
