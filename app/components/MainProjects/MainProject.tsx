@@ -1,7 +1,7 @@
 import Image from "next/image";
-import DemoButton from "./DemoButton";
-import SkillIcons from "./SkillIcons";
-import SourceButton from "./SourceButton";
+import DemoButton from "../Utils/DemoButton";
+import SkillIcons from "../Skills/SkillIcons";
+import SourceButton from "../Utils/SourceButton";
 
 const MainProject = ({
   title,

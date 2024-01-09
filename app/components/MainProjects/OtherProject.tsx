@@ -1,5 +1,5 @@
-import SourceButton from "./SourceButton";
-import DemoButton from "./DemoButton";
+import SourceButton from "../Utils/SourceButton";
+import DemoButton from "../Utils/DemoButton";
 
 const OtherProject = ({
   title,

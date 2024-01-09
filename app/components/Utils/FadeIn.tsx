@@ -13,8 +13,6 @@ const FadeIn = ({ children }: { children: React.ReactNode }) => {
     entry: IntersectionObserverEntry,
   ) => {
     let fadeDir;
-
-    console.log(entry.boundingClientRect.y);
     if (0 > entry.boundingClientRect.y) {
       fadeDir = "-50%";
     } else {
