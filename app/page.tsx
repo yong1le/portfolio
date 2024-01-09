@@ -1,7 +1,8 @@
 import { IoCaretDownOutline, IoCaretUpOutline } from "react-icons/io5";
 import Description from "./components/Description";
 import MainProject from "./components/MainProject";
-import OtherProjectsSection from "./components/OtherProjectsSection";
+import SkillsSection from "./components/SkillsSection";
+import FadeIn from "./components/FadeIn";
 
 const descriptions = [
   "A computer science student at the University of Toronto",
@@ -121,34 +122,40 @@ const skills = [
   "CSS",
   "JavaScript",
   "TypeScript",
-  "SQL",
   "Python",
   "Java",
   "C",
   "C++",
   "Bash",
   "Golang",
+
   "ReactJS",
+  "NextJS",
   "NodeJS",
-  "TailwindCSS",
   "Flask",
-  "Pandas",
-  "Matplotlib",
-  "GIT",
-  "Firebase",
-  "Supabase",
+  "TailwindCSS",
+
+  "SQL",
   "PostgreSQL",
   "MongoDB",
+
+  "Firebase",
+  "Supabase",
+
+  "Matplotlib",
+  "Pandas",
+
+  "GIT",
   "Android",
   "Web",
   "Auth",
-  "Content Management"
+  "Content Management",
 ];
 
 const Home = () => {
   return (
     <div className="inset-0">
-      <div className="flex h-screen items-center p-3 text-white sm:justify-center sm:p-0">
+      <div className="flex h-[90vh] items-center p-3 text-white sm:justify-center sm:p-0">
         <div>
           <p>Hi, my name is</p>
           <h1 className="py-4 text-3xl font-bold sm:text-6xl">Yong Le He</h1>
@@ -156,33 +163,33 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="rounded-[40px] bg-white px-10 py-10 text-black lg:px-48">
+      <div className="rounded-t-[40px] bg-white px-10 py-8 text-black lg:px-48">
         <div className={`animate-pulse text-accent`}>
           <IoCaretDownOutline className="h-6 w-full" />
         </div>
         {projects
           .filter((e) => e.main)
           .map((e, i) => (
-            <MainProject
-              key={i}
-              title={e.title}
-              description={e.description}
-              highlightTags={e.highlightTags}
-              sourceURL={e.sourceURL}
-              demoURL={e.demoURL}
-              image={e.image}
-              dir={i % 2 == 0 ? "LEFT" : "RIGHT"}
-            />
+            <FadeIn key={i}>
+              <MainProject
+                title={e.title}
+                description={e.description}
+                highlightTags={e.highlightTags}
+                sourceURL={e.sourceURL}
+                demoURL={e.demoURL}
+                image={e.image}
+                dir={i % 2 == 0 ? "LEFT" : "RIGHT"}
+              />
+            </FadeIn>
           ))}
-        <div className={`animate-pulse text-accent`}>
-          <IoCaretUpOutline className="h-6 w-full" />
-        </div>
       </div>
 
-      <div className="flex min-h-screen flex-col items-center justify-center py-10 text-white">
-        <h1 className="pb-3 text-xl font-bold sm:text-4xl">All Projects</h1>
-        <p className="pb-3 text-center">Hint: Select a skill to query the projects!</p>
-        <OtherProjectsSection skills={skills} projects={projects} />
+      <div className="flex min-h-screen flex-col items-center justify-center bg-white py-10 text-black">
+        <h1 className="pb-3 text-xl font-bold sm:text-4xl">Skills</h1>
+        <p className="px-1 pb-3 text-center">
+          Hint: Select a skill to see where they are applied!
+        </p>
+        <SkillsSection skills={skills} projects={projects} />
       </div>
     </div>
   );

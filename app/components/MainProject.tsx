@@ -24,7 +24,7 @@ const MainProject = ({
     <div
       className={`${
         dir === "LEFT" ? "xl:flex-row" : "xl:flex-row-reverse"
-      } flex flex-col justify-between gap-10 py-20`}
+      } flex flex-col items-center justify-between gap-10 py-20 xl:h-screen xl:py-0`}
     >
       <div className="flex flex-col xl:w-1/2">
         <div>
@@ -47,7 +47,7 @@ const MainProject = ({
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <div className="h-[200px] relative w-[250px] sm:h-[400px] sm:w-[600px]">
+        <div className="relative h-[170px] w-[280px] sm:h-[400px] sm:w-[600px]">
           <Image
             className="object-contain"
             src={image || "/"}

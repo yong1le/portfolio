@@ -5,7 +5,7 @@ import SkillIcons from "./SkillIcons";
 import { FaTimes } from "react-icons/fa";
 import OtherProject from "./OtherProject";
 
-const OtherProjectsSection = ({
+const SkillsSection = ({
   skills,
   projects,
 }: {
@@ -46,14 +46,14 @@ const OtherProjectsSection = ({
   };
 
   return (
-    <div className="flex flex-col items-center sm:w-3/4 lg:w-1/2 p-2 transition-all">
+    <div className="flex flex-col items-center p-2 transition-all sm:w-3/4 lg:w-2/3">
       <div className="flex flex-row flex-wrap items-center justify-center gap-1">
         {skills.map((e, i) => (
           <div key={i}>
             {query.includes(e) ? (
               <div
-                className="cursor-pointer rounded-xl border bg-white p-2 
-                text-xs text-black sm:text-sm"
+                className="cursor-pointer rounded-xl border bg-black p-2 
+                text-xs text-white sm:text-sm"
                 onClick={() => removeFromQuery(e)}
               >
                 <div className="flex flex-row items-center gap-2">
@@ -64,8 +64,8 @@ const OtherProjectsSection = ({
             ) : (
               <div
                 key={i}
-                className="cursor-pointer rounded-xl border p-2 text-xs transition-all 
-                  hover:bg-white hover:text-black sm:text-sm"
+                className="cursor-pointer rounded-xl border border-black p-2 text-xs transition-all 
+                  hover:bg-black hover:text-white sm:text-sm"
                 onClick={() => {
                   addToQuery(e);
                 }}
@@ -76,7 +76,7 @@ const OtherProjectsSection = ({
           </div>
         ))}
       </div>
-      <div className="mt-10 transition-all grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-10 grid grid-cols-1 gap-4 transition-all sm:grid-cols-2 xl:grid-cols-3">
         {projects
           .filter(filterQuery)
           .map((e, i) => (
@@ -93,4 +93,4 @@ const OtherProjectsSection = ({
   );
 };
 
-export default OtherProjectsSection;
+export default SkillsSection;
