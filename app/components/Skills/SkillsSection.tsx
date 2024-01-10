@@ -40,10 +40,7 @@ const SkillsSection = ({
       onChange={handleViewChange}
       className="flex flex-col items-center p-2 transition-all sm:w-3/4 lg:w-2/3"
     >
-      <h1 className="text-xl font-bold sm:text-4xl">Skills</h1>
-      <p className="py-3 text-center">
-        Select a skill to see where they are applied!
-      </p>
+      <h1 className="pb-3 text-xl font-bold sm:text-4xl">Skills</h1>
 
       <Skills skills={skills} query={query} setQuery={setQuery} />
 
@@ -150,20 +147,37 @@ const Projects = ({
     return true;
   };
 
+  const fallbackDivCSS =
+    "flex items-center px-5 text-center sm:text-2xl font-bold pt-20";
+  const queryResult = projects.filter(filterQuery);
+
+  if (query.length === 0) {
+    return (
+      <div className={fallbackDivCSS}>
+        <p>Select a skill to see where they are applied!</p>
+      </div>
+    );
+  }
+
+  if (queryResult.length === 0) {
+    return (
+      <div className={fallbackDivCSS}>
+        <p>Not added yet!</p>
+      </div>
+    );
+  }
+
   return (
     <div className="mt-10 grid grid-cols-1 gap-4 transition-all sm:grid-cols-2 xl:grid-cols-3">
-      {query.length != 0 &&
-        projects
-          .filter(filterQuery)
-          .map((e, i) => (
-            <OtherProject
-              key={i}
-              title={e.title}
-              description={e.description}
-              sourceURL={e.sourceURL}
-              demoURL={e.demoURL}
-            />
-          ))}
+      {queryResult.map((e, i) => (
+        <OtherProject
+          key={i}
+          title={e.title}
+          description={e.description}
+          sourceURL={e.sourceURL}
+          demoURL={e.demoURL}
+        />
+      ))}
     </div>
   );
 };

@@ -18,9 +18,9 @@ const FadeIn = ({ children }: { children: React.ReactNode }) => {
   ) => {
     let fadeDir;
     if (0 > entry.boundingClientRect.y) {
-      fadeDir = "-50%";
+      fadeDir = "-25%";
     } else {
-      fadeDir = "50%";
+      fadeDir = "25%";
     }
 
     if (inView) {
@@ -33,7 +33,7 @@ const FadeIn = ({ children }: { children: React.ReactNode }) => {
       api.start({
         from: { opacity: 1, transform: "translate(0, 0%)" },
         to: { opacity: 0, transform: `translate(0, ${fadeDir})` },
-        config: { duration: 300 },
+        config: { duration: 600 },
       });
     }
   };
