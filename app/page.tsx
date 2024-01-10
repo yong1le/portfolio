@@ -22,8 +22,8 @@ const Home = () => {
 
   return (
     <div className="inset-0">
-      <div className="flex h-[90vh] items-center p-3 text-white sm:justify-center sm:p-0">
-        <IntroSection descriptions={descriptions} />
+      <div className="flex h-[90vh] items-center text-white">
+        <IntroSection />
       </div>
 
       <div className="rounded-t-[40px] bg-white px-10 pt-8 text-black lg:px-48">

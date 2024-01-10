@@ -47,7 +47,7 @@ const MainProject = ({
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <div className="relative h-[170px] w-[280px] sm:h-[400px] sm:w-[600px]">
+        <div className="relative h-[300px] w-[300px] sm:h-[600px] sm:w-[600px]">
           <Image
             className="object-contain"
             src={image || "/"}
