@@ -84,6 +84,7 @@
   demoURL: ""
   image: ""
   main: false
+
 - title: Battery Life Predictor
   description:
     A regression model trained in Python that predicts the remaining lifetime
@@ -113,6 +114,7 @@
   demoURL: ""
   image: ""
   main: false
+
 - title: CSCB20 Messaging App
   description: Text messaging application for the final project of CSCB20.
   highlightTags:
@@ -124,6 +126,19 @@
     - HTML
     - CSS
   sourceURL: "https://github.com/yong1le/chatapp/tree/cscb20"
+  demoURL: ""
+  image: ""
+  main: false
+
+- title: "CSCB09: Software Tools and Systems Programming"
+  description: A course on programming in unix-style environments. Including a
+    final project of building a server and client connection in C.
+  highlightTags:
+    - ""
+  tags:
+    - C
+    - Bash
+  sourceURL: ""
   demoURL: ""
   image: ""
   main: false
