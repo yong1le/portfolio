@@ -168,7 +168,7 @@ const Projects = ({
   }
 
   return (
-    <div className="mt-10 grid grid-cols-1 gap-4 transition-all sm:grid-cols-2 xl:grid-cols-3">
+    <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
       {queryResult.map((e, i) => (
         <OtherProject
           key={i}
