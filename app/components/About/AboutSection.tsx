@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-20">
+    <div className="flex flex-col items-center justify-center pt-48">
       <h1 className="pb-3 text-xl font-bold sm:text-4xl">About Me</h1>
       <p className="text-center xl:w-1/2">
         {`Hey there! I'm Yong Le, a computer science student at
