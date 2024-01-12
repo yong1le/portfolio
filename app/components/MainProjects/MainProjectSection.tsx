@@ -1,14 +1,10 @@
 import React from "react";
-import { IoCaretDownOutline } from "react-icons/io5";
 import MainProject from "./MainProject";
 import FadeIn from "../Utils/FadeIn";
 
 const MainProjectSection = ({ projects }: { projects: ProjectType[] }) => {
   return (
     <div>
-      <div className={`animate-pulse text-accent`}>
-        <IoCaretDownOutline className="h-6 w-full" />
-      </div>
       {projects
         .filter((e) => e.main)
         .map((e, i) => (

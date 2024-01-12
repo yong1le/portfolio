@@ -92,15 +92,17 @@ const Skills = ({
     setQuery(query.filter((e) => e !== skill));
   };
 
+  const skillFormat =
+    "cursor-pointer rounded-xl border p-2 text-xs sm:text-lg";
+
   return (
-    <div className="flex flex-row flex-wrap items-center justify-center gap-1">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-1 sm:gap-2">
       {skills &&
         skills.map((e, i) => (
           <div key={i}>
             {query.includes(e) ? (
               <div
-                className="cursor-pointer rounded-xl border bg-black p-2 
-                text-xs text-white sm:text-sm"
+                className={`${skillFormat} bg-black text-white`}
                 onClick={() => removeFromQuery(e)}
               >
                 <div className="flex flex-row items-center gap-2">
@@ -111,8 +113,7 @@ const Skills = ({
             ) : (
               <div
                 key={i}
-                className="cursor-pointer rounded-xl border border-black p-2 text-xs transition-all 
-                  hover:bg-black hover:text-white sm:text-sm"
+                className={`${skillFormat} border-black transition-all hover:bg-black hover:text-white`}
                 onClick={() => {
                   addToQuery(e);
                 }}
