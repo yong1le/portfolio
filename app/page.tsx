@@ -36,7 +36,7 @@ const Home = () => {
         <div id="HeaderTrigger" className={`animate-pulse py-8 text-accent`}>
           <IoCaretDownOutline className="h-6 w-full" />
         </div>
-        <div id="AboutSection">
+        <div id="AboutSection" className="h-screen">
           <AboutSection />
         </div>
         <div id="ProjectsSection">
