@@ -1,3 +1,4 @@
+# Languages
 - HTML
 - CSS
 - JavaScript
@@ -9,24 +10,34 @@
 - Bash
 - Golang
 
+# Frameworks
 - ReactJS
 - NextJS
 - NodeJS
 - Flask
 - TailwindCSS
+- ExpressJS
 
+# DB
 - SQL
 - PostgreSQL
 - MongoDB
 
+# BaaS
 - Firebase
 - Supabase
 
+# ML & DS
 - Matplotlib
 - Pandas
 
-- GIT
+# Mobile
+- Mobile Development
 - Android
+- React Native
+
+# Tools
+- GIT
 - Web
 - Auth
 - Content Management

@@ -2,6 +2,7 @@ import {
   SiC,
   SiCplusplus,
   SiCss3,
+  SiExpress,
   SiFirebase,
   SiFlask,
   SiGit,
@@ -26,6 +27,8 @@ import { HiOutlineStatusOnline } from "react-icons/hi";
 import { GiQuickSlash } from "react-icons/gi";
 import { GrTest } from "react-icons/gr";
 import { ImFileEmpty } from "react-icons/im";
+import { BiSolidMobile } from "react-icons/bi";
+import { TbBrandReactNative } from "react-icons/tb";
 
 const SkillIcons = ({ skill }: { skill: string }) => {
   let skillIcon;
@@ -114,6 +117,15 @@ const SkillIcons = ({ skill }: { skill: string }) => {
       break;
     case "MongoDB":
       skillIcon = <SiMongodb />;
+      break;
+    case "ExpressJS":
+      skillIcon = <SiExpress />;
+      break;
+    case "Mobile Development":
+      skillIcon = <BiSolidMobile />;
+      break;
+    case "React Native":
+      skillIcon = <TbBrandReactNative />;
       break;
     default:
       skillIcon = <ImFileEmpty/>;

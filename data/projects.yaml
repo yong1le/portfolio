@@ -1,3 +1,25 @@
+- title: GoHere Demo
+  description:
+    A mobile application built with React Native to provide directions to
+    nearby washrooms for individuals with gut diseases. The app features
+    a user facing mobile frontend and also an admin interface for ease of
+    maintainment.
+  highlightTags:
+    - React Native
+    - MongoDB
+    - Mobile Development
+    - ExpressJS
+  tags:
+    - HTML
+    - CSS
+    - JavaScript
+    - GIT
+    - Web
+  sourceURL: "https://github.com/AlvinCao88/c01w24-project-Safe_Haven"
+  demoURL: ""
+  image: "/images/gohere.png"
+  main: true
+
 - title: Thomp
   description:
     A full stack social media platform built using a Next.js and JavaScript
@@ -57,6 +79,7 @@
     - Testing
     - Android
   tags:
+    - Mobile Development
     - Mockito
     - JUnit
     - GIT
@@ -65,7 +88,7 @@
   sourceURL: "https://github.com/michaelz04/Mall-App"
   demoURL: ""
   image: /images/mall.png
-  main: true
+  main: false
 
 - title: College Coin
   description: A student loan marketplace app to promote affordable
