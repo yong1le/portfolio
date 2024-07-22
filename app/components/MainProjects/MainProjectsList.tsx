@@ -2,7 +2,7 @@ import React from "react";
 import MainProject from "./MainProject";
 import FadeIn from "../Utils/FadeIn";
 
-const MainProjectSection = ({ projects }: { projects: ProjectType[] }) => {
+const MainProjectsList = ({ projects }: { projects: ProjectType[] }) => {
   return (
     <div>
       {projects
@@ -24,4 +24,4 @@ const MainProjectSection = ({ projects }: { projects: ProjectType[] }) => {
   );
 };
 
-export default MainProjectSection;
+export default MainProjectsList;

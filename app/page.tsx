@@ -1,4 +1,4 @@
-import MainProjectSection from "./components/MainProjects/MainProjectSection";
+import MainProjectsList from "./components/MainProjects/MainProjectsList";
 import SkillsSection from "./components/Skills/SkillsSection";
 import IntroSection from "./components/Intro/IntroSection";
 
@@ -40,7 +40,7 @@ const Home = () => {
           <AboutSection />
         </div>
         <div id="ProjectsSection">
-          <MainProjectSection projects={projects} />
+          <MainProjectsList projects={projects} />
         </div>
       </div>
 
