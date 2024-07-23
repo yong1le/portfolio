@@ -34,6 +34,9 @@ const Header = ({
   const [isFullHeader, setIsFullHeader] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
 
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+
+  // Show header when scrolled to certain point
   useEffect(() => {
     const showFullHeader = () => {
       const elm = document.querySelector(`#${triggerID}`);
@@ -61,6 +64,7 @@ const Header = ({
     };
   }, [setIsFullHeader, triggerID, api]);
 
+  // Hide header when window too small
   useEffect(() => {
     const handleHeaderVisible = () => {
       if (window.innerWidth >= 550) setHeaderVisible(true);
@@ -74,27 +78,53 @@ const Header = ({
     };
   }, [setHeaderVisible]);
 
+  // Update scroll progress bar
+  useEffect(() => {
+    const onScroll = () => {
+      const h = document.documentElement;
+      const b = document.body;
+      const st = "scrollTop";
+      const sh = "scrollHeight";
+
+      const percent =
+        ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
+      setScrollPercentage(percent);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   if (isFullHeader && headerVisible) {
     const buttonFormat = "transition-all hover:scale-110";
     return (
-      <animated.div
-        style={slideIn}
-        className="navbar fixed left-0 top-0  z-50 bg-white p-10 text-black"
-      >
-        <h1 className="navbar-start text-xl font-bold">Yong Le He</h1>
+      <div className="fixed left-0 top-0 z-50 w-full">
+        <animated.div
+          style={slideIn}
+          className="navbar bg-white p-10 text-black"
+        >
+          <h1 className="navbar-start text-xl font-bold">Yong Le He</h1>
 
-        <div className="navbar-end flex flex-row items-end gap-6">
-          <button className={buttonFormat} onClick={gotoAbout}>
-            About Me
-          </button>
-          <button className={buttonFormat} onClick={gotoProjects}>
-            Projects
-          </button>
-          <button className={buttonFormat} onClick={gotoSkills}>
-            Skills
-          </button>
-        </div>
-      </animated.div>
+          <div className="navbar-end flex flex-row items-end gap-6">
+            <button className={buttonFormat} onClick={gotoAbout}>
+              About Me
+            </button>
+            <button className={buttonFormat} onClick={gotoProjects}>
+              Projects
+            </button>
+            <button className={buttonFormat} onClick={gotoSkills}>
+              Skills
+            </button>
+          </div>
+        </animated.div>
+
+        <progress
+          className="progress progress-warning block h-1 rounded-none"
+          value={scrollPercentage}
+          max={100}
+        ></progress>
+      </div>
     );
   }
 
