@@ -29,7 +29,7 @@ const Header = ({
     elm?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [slideIn, api] = useSpring(() => {});
+  const [slideIn, api] = useSpring(() => { });
 
   const [isFullHeader, setIsFullHeader] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
@@ -39,11 +39,11 @@ const Header = ({
       const elm = document.querySelector(`#${triggerID}`);
       const rect = elm?.getBoundingClientRect();
 
-      if (rect?.bottom && rect?.bottom <= 0) {
+      if (rect?.top && rect?.top <= 0) {
         setIsFullHeader((prev) => {
           if (!prev) {
             api.start({
-              from: { transform: "translate(0, -25%)" },
+              from: { transform: "translate(0, -100%)" },
               to: { transform: "translate(0, 0%)" },
             });
           }

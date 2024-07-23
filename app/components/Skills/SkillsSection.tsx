@@ -47,9 +47,8 @@ const SkillsSection = ({
       <Projects projects={projects} query={query} />
       <animated.div
         style={popup}
-        className={`${
-          query.length === 0 && "opacity-0"
-        } fixed bottom-0 right-0 m-10 transition-opacity`}
+        className={`${query.length === 0 && "opacity-0"
+          } fixed bottom-0 right-0 m-10 transition-opacity`}
       >
         <ClearButton setQuery={setQuery} />
       </animated.div>
@@ -113,7 +112,7 @@ const Skills = ({
             ) : (
               <div
                 key={i}
-                className={`${skillFormat} border-black transition-all hover:bg-black hover:text-white`}
+                className={`${skillFormat} border-transparent transition-all hover:bg-black hover:text-white`}
                 onClick={() => {
                   addToQuery(e);
                 }}

@@ -6,7 +6,7 @@ const DemoButton = ({ href }: { href: string }) => {
     <Link href={href} target="_blank">
       <div
         className="flex w-[150px] flex-row items-center justify-center gap-2 rounded-xl border 
-        border-highlight p-2 text-highlight transition-all hover:bg-highlight hover:text-white
+        border-highlight p-2 transition-all bg-highlight text-white
         hover:scale-110"
       >
         <FaDoorOpen />

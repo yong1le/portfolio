@@ -10,7 +10,7 @@ const AboutSection = () => {
       after:border-b-[10px] after:border-r-[10px] after:border-black"
     >
       <h1 className="pb-3 text-xl font-bold sm:text-4xl">About Me</h1>
-      <p className="text-center xl:w-1/2">
+      <p className="text-left xl:w-1/2">
         {`Hey there! I'm Yong Le, a computer science student at
         the University of Toronto with a passion for crafting seamless web
         applications. Beyond the code, I revel in the elegance of command line
