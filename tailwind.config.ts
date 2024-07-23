@@ -12,10 +12,13 @@ const config: Config = {
         black: "#3C2B00",
         white: "#FDF7E4",
         accent: "#CD8D7A",
-        highlight: "#ED7D31"
+        highlight: "#ED7D31",
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    logs: false,
+  },
 };
 export default config;

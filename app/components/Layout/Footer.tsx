@@ -4,7 +4,7 @@ import { FaCopyright, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col px-10 py-16 gap-7">
+    <div className="flex flex-col gap-7 px-10 py-16">
       <h1 className="text-xl font-bold text-yellow-100">Yong Le He</h1>
       <p className="text-sm">Full-Stack Developer</p>
       <div className="flex flex-row gap-2 text-xl">
@@ -19,12 +19,10 @@ const Footer = () => {
           <FaGithub />
         </Link>
       </div>
-      <p className="self-center flex flex-row gap-1 items-center">
-        <FaCopyright/>
+      <p className="flex flex-row items-center gap-1 self-center">
+        <FaCopyright />
         2024 All rights reserved
-        <b>
-          Yong Le He
-        </b>
+        <b>Yong Le He</b>
       </p>
     </div>
   );

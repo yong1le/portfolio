@@ -47,8 +47,9 @@ const SkillsSection = ({
       <Projects projects={projects} query={query} />
       <animated.div
         style={popup}
-        className={`${query.length === 0 && "opacity-0"
-          } fixed bottom-0 right-0 m-10 transition-opacity`}
+        className={`${
+          query.length === 0 && "opacity-0"
+        } fixed bottom-0 right-0 m-10 transition-opacity`}
       >
         <ClearButton setQuery={setQuery} />
       </animated.div>
@@ -66,7 +67,7 @@ const ClearButton = ({
   };
   return (
     <button
-      className="h-[70px] w-[70px] rounded-[50%] bg-accent px-2 py-6 text-white shadow-2xl shadow-slate-400 transition-all hover:scale-110"
+      className="btn btn-circle btn-lg border-none bg-accent text-white shadow-md shadow-black"
       onClick={clearQuery}
     >
       Clear
@@ -91,9 +92,6 @@ const Skills = ({
     setQuery(query.filter((e) => e !== skill));
   };
 
-  const skillFormat =
-    "cursor-pointer rounded-xl border p-2 text-xs sm:text-lg";
-
   return (
     <div className="flex flex-row flex-wrap items-center justify-center gap-1 sm:gap-2">
       {skills &&
@@ -101,7 +99,7 @@ const Skills = ({
           <div key={i}>
             {query.includes(e) ? (
               <div
-                className={`${skillFormat} bg-black text-white`}
+                className={`btn glass bg-black text-white`}
                 onClick={() => removeFromQuery(e)}
               >
                 <div className="flex flex-row items-center gap-2">
@@ -112,7 +110,7 @@ const Skills = ({
             ) : (
               <div
                 key={i}
-                className={`${skillFormat} border-transparent transition-all hover:bg-black hover:text-white`}
+                className="btn glass btn-ghost"
                 onClick={() => {
                   addToQuery(e);
                 }}
@@ -134,6 +132,7 @@ const Projects = ({
   query: string[];
 }) => {
   const filterQuery = (project: ProjectType) => {
+    // if (project.main) return false; // TODO: add back when I have more projects
     for (let i = 0; i < query.length; i++) {
       if (
         !(

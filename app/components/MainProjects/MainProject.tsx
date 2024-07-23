@@ -24,9 +24,9 @@ const MainProject = ({
     <div
       className={`${
         dir === "LEFT" ? "xl:flex-row" : "xl:flex-row-reverse"
-      } flex flex-col items-center justify-between gap-10 py-20 xl:h-screen xl:py-0`}
+      } hero hero-content min-h-screen flex-col`}
     >
-      <div className="flex flex-col xl:w-1/2">
+      <div>
         <div>
           <h1 className="mb-3 text-xl font-bold lg:text-4xl">{title}</h1>
           <p>{description}</p>
@@ -46,7 +46,7 @@ const MainProject = ({
           {demoURL && <DemoButton href={demoURL} />}
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div>
         <div className="relative h-[300px] w-[300px] sm:h-[600px] sm:w-[600px]">
           <Image
             className="object-contain"

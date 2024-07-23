@@ -7,8 +7,7 @@ import { FaLinkedin, FaFilePdf, FaGithub } from "react-icons/fa6";
 // children prop should only be used for header
 const IntroSection = ({ children }: { children: React.ReactNode }) => {
   const buttonFormat =
-    "sm:text-xl text-center py-4 rounded-xl hover:scale-110 cursor-pointer transition-all w-full py-5 max-w-[400px]";
-  const linkFormat = "flex flex-row items-center justify-center gap-3";
+    "btn btn-lg btn-block btn-ghost hover:scale-110 max-w-[400px]";
 
   return (
     <div className="flex flex-col gap-10 px-6 transition-all lg:w-full lg:flex-row lg:items-center lg:justify-center lg:gap-16">
@@ -31,32 +30,30 @@ const IntroSection = ({ children }: { children: React.ReactNode }) => {
           height={400}
           alt="alt"
         />
-        <div className={`${buttonFormat} bg-highlight`}>
-          <Link className={`${linkFormat}`} href="/resume.pdf" target="_blank">
-            <FaFilePdf />
-            <p>Resume</p>
-          </Link>
-        </div>
-        <div className={`${buttonFormat} bg-blue-800`}>
-          <Link
-            className={`${linkFormat}`}
-            href="https://www.linkedin.com/in/yonglehe/"
-            target="_blank"
-          >
-            <FaLinkedin />
-            <p>LinkedIn</p>
-          </Link>
-        </div>
-        <div className={`${buttonFormat} bg-[#000000]`}>
-          <Link
-            className={`${linkFormat}`}
-            href="https://github.com/yong1le"
-            target="_blank"
-          >
-            <FaGithub />
-            <p>Github</p>
-          </Link>
-        </div>
+        <Link
+          className={`${buttonFormat} bg-highlight hover:bg-highlight`}
+          href="/resume.pdf"
+          target="_blank"
+        >
+          <FaFilePdf />
+          <p>Resume</p>
+        </Link>
+        <Link
+          className={`${buttonFormat} bg-blue-800 hover:bg-blue-800`}
+          href="https://www.linkedin.com/in/yonglehe/"
+          target="_blank"
+        >
+          <FaLinkedin />
+          <p>LinkedIn</p>
+        </Link>
+        <Link
+          className={`${buttonFormat} bg-[#000] hover:bg-[#000]`}
+          href="https://github.com/yong1le"
+          target="_blank"
+        >
+          <FaGithub />
+          <p>Github</p>
+        </Link>
       </div>
     </div>
   );

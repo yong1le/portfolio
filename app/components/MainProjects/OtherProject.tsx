@@ -13,16 +13,12 @@ const OtherProject = ({
   demoURL: string;
 }) => {
   return (
-    <div
-      className="flex flex-col justify-between gap-4 rounded-xl
-      border-white bg-white p-4 text-black transition-all hover:scale-105 
-      "
-    >
-      <div>
-        <h1 className="mb-3 font-bold lg:text-2xl">{title}</h1>
+    <div className="card">
+      <div className="card-body">
+        <h1 className="card-title">{title}</h1>
         <p className="text-xs">{description}</p>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="card-actions justify-end">
         {sourceURL && <SourceButton href={sourceURL} />}
         {demoURL && <DemoButton href={demoURL} />}
       </div>

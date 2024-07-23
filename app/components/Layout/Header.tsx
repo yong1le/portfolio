@@ -29,7 +29,7 @@ const Header = ({
     elm?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [slideIn, api] = useSpring(() => { });
+  const [slideIn, api] = useSpring(() => {});
 
   const [isFullHeader, setIsFullHeader] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
@@ -75,30 +75,22 @@ const Header = ({
   }, [setHeaderVisible]);
 
   if (isFullHeader && headerVisible) {
+    const buttonFormat = "transition-all hover:scale-110";
     return (
       <animated.div
         style={slideIn}
-        className="fixed left-0 top-0 z-50 flex w-full flex-row items-end justify-between bg-white p-10 text-black"
+        className="navbar fixed left-0 top-0  z-50 bg-white p-10 text-black"
       >
-        <h1 className="text-xl font-bold">Yong Le He</h1>
+        <h1 className="navbar-start text-xl font-bold">Yong Le He</h1>
 
-        <div className="flex flex-row items-end gap-6">
-          <button
-            className="transition-all hover:scale-110"
-            onClick={gotoAbout}
-          >
+        <div className="navbar-end flex flex-row items-end gap-6">
+          <button className={buttonFormat} onClick={gotoAbout}>
             About Me
           </button>
-          <button
-            className="transition-all hover:scale-110"
-            onClick={gotoProjects}
-          >
+          <button className={buttonFormat} onClick={gotoProjects}>
             Projects
           </button>
-          <button
-            className="transition-all hover:scale-110"
-            onClick={gotoSkills}
-          >
+          <button className={buttonFormat} onClick={gotoSkills}>
             Skills
           </button>
         </div>
@@ -106,18 +98,17 @@ const Header = ({
     );
   }
 
+  const buttonFormat =
+    "btn btn-ghost hover:scale-110 hover:bg-transparent sm:text-xl underline decoration-4 underline-offset-4 decoration-yellow-400 px-0";
   return (
-    <div
-      className="flex flex-row justify-between underline decoration-yellow-400 
-      underline-offset-4 sm:justify-start sm:gap-10 sm:text-xl decoration-4"
-    >
-      <button className="transition-all hover:scale-110" onClick={gotoAbout}>
+    <div className="flex flex-row justify-between sm:justify-start sm:gap-10">
+      <button className={buttonFormat} onClick={gotoAbout}>
         About Me
       </button>
-      <button className="transition-all hover:scale-110" onClick={gotoProjects}>
+      <button className={buttonFormat} onClick={gotoProjects}>
         Projects
       </button>
-      <button className="transition-all hover:scale-110" onClick={gotoSkills}>
+      <button className={buttonFormat} onClick={gotoSkills}>
         Skills
       </button>
     </div>
