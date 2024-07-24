@@ -2,6 +2,7 @@ import Image from "next/image";
 import DemoButton from "../Utils/DemoButton";
 import SkillIcons from "../Skills/SkillIcons";
 import SourceButton from "../Utils/SourceButton";
+import { Skill } from "@/app/enums";
 
 const MainProject = ({
   title,
@@ -14,7 +15,7 @@ const MainProject = ({
 }: {
   title: string;
   description: string;
-  highlightTags: string[];
+  highlightTags: Skill[];
   sourceURL: string | null;
   demoURL: string | null;
   image: string | null;

@@ -29,112 +29,114 @@ import { GrTest } from "react-icons/gr";
 import { ImFileEmpty } from "react-icons/im";
 import { BiSolidMobile } from "react-icons/bi";
 import { TbBrandReactNative } from "react-icons/tb";
+import { Skill } from "../../enums";
+import React from "react";
 
-const SkillIcons = ({ skill }: { skill: string }) => {
-  let skillIcon;
+const SkillIcons = ({ skill }: { skill: Skill }) => {
+  let skillIcon: JSX.Element;
 
   switch (skill) {
-    case "NextJS":
+    case Skill.NEXT_JS:
       skillIcon = <SiNextdotjs />;
       break;
-    case "Golang":
+    case Skill.GOLANG:
       skillIcon = <FaGolang />;
       break;
-    case "Supabase":
+    case Skill.SUPABASE:
       skillIcon = <RiSupabaseFill />;
       break;
-    case "Auth":
+    case Skill.AUTH:
       skillIcon = <FaLock />;
       break;
-    case "Content Management":
+    case Skill.CONTENT_MANAGEMENT:
       skillIcon = <MdManageAccounts />;
       break;
-    case "JavaScript":
+    case Skill.JAVASCRIPT:
       skillIcon = <SiJavascript />;
       break;
-    case "TypeScript":
+    case Skill.TYPESCRIPT:
       skillIcon = <SiTypescript />;
       break;
-    case "HTML":
+    case Skill.HTML:
       skillIcon = <SiHtml5 />;
       break;
-    case "CSS":
+    case Skill.CSS:
       skillIcon = <SiCss3 />;
       break;
-    case "PostgreSQL":
+    case Skill.POSTGRESQL:
       skillIcon = <SiPostgresql />;
       break;
-    case "ReactJS":
+    case Skill.REACT_JS:
       skillIcon = <SiReact />;
       break;
-    case "Web":
+    case Skill.WEB:
       skillIcon = <HiOutlineStatusOnline />;
       break;
-    case "TailwindCSS":
+    case Skill.TAILWIND:
       skillIcon = <SiTailwindcss />;
       break;
-    case "GIT":
+    case Skill.GIT:
       skillIcon = <SiGit />;
       break;
-    case "Java":
+    case Skill.JAVA:
       skillIcon = <FaJava />;
       break;
-    case "Agile Development":
+    case Skill.AGILE:
       skillIcon = <GiQuickSlash />;
       break;
-    case "Testing":
+    case Skill.TESTING:
       skillIcon = <GrTest />;
       break;
-    case "Android":
+    case Skill.ANDROID:
       skillIcon = <FaAndroid />;
       break;
-    case "JUnit":
+    case Skill.JUNIT:
       skillIcon = <SiJunit5 />;
       break;
-    case "Firebase":
+    case Skill.FIREBASE:
       skillIcon = <SiFirebase />;
       break;
-    case "Python":
+    case Skill.PYTHON:
       skillIcon = <SiPython />;
       break;
-    case "Pandas":
+    case Skill.PANDAS:
       skillIcon = <SiPandas />;
       break;
-    case "Flask":
+    case Skill.FLASK:
       skillIcon = <SiFlask />;
       break;
-    case "NodeJS":
+    case Skill.NODE_JS:
       skillIcon = <SiNodedotjs />;
       break;
-    case "C":
+    case Skill.C:
       skillIcon = <SiC />;
       break;
-    case "C++":
+    case Skill.CPP:
       skillIcon = <SiCplusplus />;
       break;
-    case "Bash":
+    case Skill.BASH:
       skillIcon = <SiGnubash />;
       break;
-    case "MongoDB":
+    case Skill.MONGODB:
       skillIcon = <SiMongodb />;
       break;
-    case "ExpressJS":
+    case Skill.EXPRESS_JS:
       skillIcon = <SiExpress />;
       break;
-    case "Mobile Development":
+    case Skill.MOBILE_DEVELOPMENT:
       skillIcon = <BiSolidMobile />;
       break;
-    case "React Native":
+    case Skill.REACT_NATIVE:
       skillIcon = <TbBrandReactNative />;
       break;
     default:
-      skillIcon = <ImFileEmpty/>;
+      skillIcon = <ImFileEmpty />;
   }
 
   return (
     <div className="flex flex-row items-center gap-2">
       {skillIcon}
-      <p>{skill}</p>
+      <p>{skill.valueOf()}</p>
     </div>
   );
 };

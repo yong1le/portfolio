@@ -6,12 +6,13 @@ import { FaTimes } from "react-icons/fa";
 import OtherProject from "../MainProjects/OtherProject";
 import { InView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
+import { Skill } from "@/app/enums";
 
 const SkillsSection = ({
   skills,
   projects,
 }: {
-  skills: string[];
+  skills: Skill[];
   projects: ProjectType[];
 }) => {
   const [query, setQuery] = useState<string[]>([]);
@@ -80,7 +81,7 @@ const Skills = ({
   query,
   setQuery,
 }: {
-  skills: string[];
+  skills: Skill[];
   query: string[];
   setQuery: Dispatch<SetStateAction<string[]>>;
 }) => {
