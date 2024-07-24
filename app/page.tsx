@@ -8,9 +8,10 @@ import Header from "./components/Layout/Header";
 import AboutSection from "./components/About/AboutSection";
 import { IoCaretDownOutline } from "react-icons/io5";
 import Footer from "./components/Layout/Footer";
+import { Skill } from "./enums";
 
 const Home = () => {
-  const skills: string[] =
+  const skills: Skill[] =
     yaml.parse(fs.readFileSync(process.cwd() + "/data/skills.yaml", "utf8")) ||
     [];
 
