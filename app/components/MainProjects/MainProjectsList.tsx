@@ -4,7 +4,7 @@ import FadeIn from "../Utils/FadeIn";
 
 const MainProjectsList = ({ projects }: { projects: ProjectType[] }) => {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       {projects
         .filter((e) => e.main)
         .map((e, i) => (
