@@ -1,6 +1,6 @@
 # Portfolio
 
-Visit the website [here](https:/www.yonglehe.com)
+Visit the website [here](https://www.yonglehe.com)
 
 ## Getting Started
 
