@@ -14,6 +14,15 @@ const config: Config = {
         accent: "#CD8D7A",
         highlight: "#ED7D31",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            "*": {
+              color: "#3C2B00",
+            },
+          },
+        },
+      },
     },
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],

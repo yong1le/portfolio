@@ -12,13 +12,12 @@
     "@react-spring/web": "^9.7.3",
     "js-yaml": "^4.1.0",
     "next": "^14.2.5",
+    "next-mdx-remote": "^5.0.0",
     "react": "^18",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
     "react-intersection-observer": "^9.5.3",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1",
     "yaml": "^2.3.4"
   },
   "devDependencies": {
