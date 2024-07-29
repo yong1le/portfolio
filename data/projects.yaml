@@ -17,7 +17,7 @@
     - Web
   sourceURL: "https://github.com/AlvinCao88/c01w24-project-Safe_Haven"
   demoURL: ""
-  image: "/images/gohere.png"
+  image: "/images/projects/gohere.png"
   main: true
 
 - title: Thomp
@@ -43,7 +43,7 @@
     - GIT
   sourceURL: "https://github.com/yong1le/thomp"
   demoURL: "https://thomp.vercel.app/home"
-  image: /images/thomp.png
+  image: /images/projects/thomp.png
   main: true
 
 - title: Asian Christian Fellowship Club Website
@@ -65,7 +65,7 @@
     - Web
   sourceURL: "https://github.com/yong1le/utscacf-website"
   demoURL: "https://utscacf.vercel.app/home"
-  image: /images/acf.png
+  image: /images/projects/acf.png
   main: true
 
 - title: Javan's Mall
@@ -87,7 +87,7 @@
     - Firebase
   sourceURL: "https://github.com/michaelz04/Mall-App"
   demoURL: ""
-  image: /images/mall.png
+  image: /images/projects/mall.png
   main: false
 
 - title: College Coin

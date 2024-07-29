@@ -38,7 +38,7 @@ const IntroSection = ({ children }: { children: React.ReactNode }) => {
           <p>Resume</p>
         </Link>
         <Link
-          className={`${buttonFormat} btn-info`}
+          className={`${buttonFormat} btn-info text-secondary`}
           href="https://www.linkedin.com/in/yonglehe/"
           target="_blank"
         >
@@ -46,7 +46,7 @@ const IntroSection = ({ children }: { children: React.ReactNode }) => {
           <p>LinkedIn</p>
         </Link>
         <Link
-          className={`${buttonFormat} bg-[#000] text-[#fff] hover:bg-[#000]`}
+          className={`${buttonFormat} btn-ghost bg-[#000] hover:bg-[#000]`}
           href="https://github.com/yong1le"
           target="_blank"
         >

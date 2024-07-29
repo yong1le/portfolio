@@ -21,7 +21,7 @@ const Home = () => {
     ) || [];
 
   return (
-    <div className="inset-0">
+    <div className="inset-0 bg-primary text-primary-content">
       <div className="flex h-[90vh] min-h-fit items-center">
         <IntroSection>
           <Header

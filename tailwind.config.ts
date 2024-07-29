@@ -32,8 +32,6 @@ const config: Config = {
           "secondary-content": "#3C2B00",
           accent: "#ED7D31",
           "accent-content": "#FDF7E4",
-          "base-100": "#000",
-          "base-content": "#fff",
         },
       },
     ],
