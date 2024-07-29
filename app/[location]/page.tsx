@@ -14,7 +14,7 @@ const Location = async ({ params }: { params: { location: string } }) => {
   return (
     <div>
       <Link
-        href="../"
+        href="/#ExperiencesSection"
         className="btn btn-primary mb-10 text-xl font-bold hover:scale-110"
       >
         BACK
