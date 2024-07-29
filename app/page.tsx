@@ -9,6 +9,7 @@ import AboutSection from "./components/About/AboutSection";
 import { IoCaretDownOutline } from "react-icons/io5";
 import Footer from "./components/Layout/Footer";
 import { Skill } from "./enums";
+import ExperiencesSection from "./components/Experiences/ExperiencesSection";
 
 const Home = () => {
   const skills: Skill[] =
@@ -27,6 +28,7 @@ const Home = () => {
           <Header
             aboutID="AboutSection"
             projectsID="ProjectsSection"
+            experiencesID="ExperiencesSection"
             skillsID="SkillsSection"
             triggerID="HeaderTrigger"
           />
@@ -39,6 +41,9 @@ const Home = () => {
         </div>
         <div id="AboutSection" className="h-screen">
           <AboutSection />
+        </div>
+        <div id="ExperiencesSection">
+          <ExperiencesSection />
         </div>
         <div id="ProjectsSection">
           <MainProjectsList projects={projects} />

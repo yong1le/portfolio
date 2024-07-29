@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 const Header = ({
   aboutID,
   projectsID,
+  experiencesID,
   skillsID,
   triggerID,
 }: {
   aboutID: string;
   projectsID: string;
+  experiencesID: string;
   skillsID: string;
   triggerID: string;
 }) => {
@@ -21,6 +23,11 @@ const Header = ({
 
   const gotoProjects = () => {
     const elm = document.querySelector(`#${projectsID}`);
+    elm?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const gotoExperiences = () => {
+    const elm = document.querySelector(`#${experiencesID}`);
     elm?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -110,6 +117,9 @@ const Header = ({
             <button className={buttonFormat} onClick={gotoAbout}>
               About Me
             </button>
+            <button className={buttonFormat} onClick={gotoExperiences}>
+              Experiences
+            </button>
             <button className={buttonFormat} onClick={gotoProjects}>
               Projects
             </button>
@@ -131,9 +141,12 @@ const Header = ({
   const buttonFormat =
     "btn btn-ghost hover:scale-110 hover:bg-transparent sm:text-xl underline decoration-4 underline-offset-4 decoration-yellow-400 px-0";
   return (
-    <div className="flex flex-row justify-between sm:justify-start sm:gap-10">
+    <div className="flex flex-row flex-wrap justify-between sm:justify-start sm:gap-10">
       <button className={buttonFormat} onClick={gotoAbout}>
         About Me
+      </button>
+      <button className={buttonFormat} onClick={gotoExperiences}>
+        Experiences
       </button>
       <button className={buttonFormat} onClick={gotoProjects}>
         Projects

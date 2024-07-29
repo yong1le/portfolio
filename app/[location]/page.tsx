@@ -1,5 +1,6 @@
 import fs from "fs";
 import Link from "next/link";
+import LinkedList from "../components/Utils/LinkList";
 
 const Location = async ({ params }: { params: { location: string } }) => {
   const locationsDirectory = process.cwd() + `/data/${params.location}`;
@@ -18,20 +19,11 @@ const Location = async ({ params }: { params: { location: string } }) => {
       >
         BACK
       </Link>
-      <div className="prose">
-        <h1 className="self-start">
+      <div>
+        <h1 className="self-start text-xl font-bold lg:text-4xl">
           {params.location.replaceAll(/[-_]/g, " ").toUpperCase()}
         </h1>
-        <ul>
-          {experiences &&
-            experiences.map((exp, i) => (
-              <li key={i}>
-                <Link href={`${baseDirectory}/${exp}`}>
-                  {exp.replaceAll(/[-_]/g, " ").toUpperCase()}
-                </Link>
-              </li>
-            ))}
-        </ul>
+        <LinkedList links={experiences} linkPrefix={`/${baseDirectory}`} />
       </div>
     </div>
   );
