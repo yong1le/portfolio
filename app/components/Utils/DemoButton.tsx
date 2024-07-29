@@ -4,7 +4,7 @@ import { FaDoorOpen } from "react-icons/fa";
 const DemoButton = ({ href }: { href: string }) => {
   return (
     <Link href={href} target="_blank">
-      <div className="btn glass border-none bg-highlight text-white hover:scale-110 hover:bg-highlight">
+      <div className="btn glass btn-accent border-none bg-accent hover:scale-110 ">
         <FaDoorOpen />
         <p>Visit Page</p>
       </div>

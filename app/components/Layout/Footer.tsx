@@ -5,7 +5,7 @@ import { FaCopyright, FaGithub, FaLinkedin } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div className="flex flex-col gap-7 px-10 py-16">
-      <h1 className="text-xl font-bold text-yellow-100">Yong Le He</h1>
+      <h1 className="text-xl font-bold text-primary-content">Yong Le He</h1>
       <p className="text-sm">Full-Stack Developer</p>
       <div className="flex flex-row gap-2 text-xl">
         <Link

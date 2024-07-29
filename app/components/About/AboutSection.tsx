@@ -5,9 +5,9 @@ const AboutSection = () => {
     <div
       className="flex h-full flex-col items-center justify-center 
       before:h-[50px] before:w-[50px] before:self-start before:rounded-tl-2xl
-      before:border-l-[10px] before:border-t-[10px] before:border-black
+      before:border-l-[10px] before:border-t-[10px] before:border-secondary-content
       after:h-[50px] after:w-[50px] after:self-end after:rounded-br-2xl
-      after:border-b-[10px] after:border-r-[10px] after:border-black"
+      after:border-b-[10px] after:border-r-[10px] after:border-secondary-content"
     >
       <h1 className="pb-3 text-xl font-bold sm:text-4xl">About Me</h1>
       <p className="text-left xl:w-1/2">

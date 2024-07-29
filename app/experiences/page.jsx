@@ -6,8 +6,8 @@ const Experience = async () => {
   const content = fs.readFileSync(fullPath, "utf8");
 
   return (
-    <div className="flex h-full min-h-screen justify-center bg-white p-20">
-      <div className="prose prose-a:text-highlight">
+    <div className="flex h-full min-h-screen justify-center bg-secondary p-20">
+      <div className="prose prose-a:text-primary">
         <MDXRemote source={content} />
       </div>
     </div>

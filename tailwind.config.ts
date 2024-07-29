@@ -8,12 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        black: "#3C2B00",
-        white: "#FDF7E4",
-        accent: "#CD8D7A",
-        highlight: "#ED7D31",
-      },
       typography: {
         DEFAULT: {
           css: {
@@ -28,6 +22,21 @@ const config: Config = {
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
   daisyui: {
     logs: false,
+    themes: [
+      {
+        default: {
+          ...require("daisyui/src/theming/themes")["autumn"],
+          primary: "#CD8D7A",
+          "primary-content": "#FDF7E4",
+          secondary: "#FDF7E4",
+          "secondary-content": "#3C2B00",
+          accent: "#ED7D31",
+          "accent-content": "#FDF7E4",
+          "base-100": "#000",
+          "base-content": "#fff",
+        },
+      },
+    ],
   },
 };
 export default config;

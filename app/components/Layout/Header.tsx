@@ -102,7 +102,7 @@ const Header = ({
       <div className="fixed left-0 top-0 z-50 w-full">
         <animated.div
           style={slideIn}
-          className="navbar bg-white p-10 text-black"
+          className="navbar bg-secondary p-10 text-secondary-content"
         >
           <h1 className="navbar-start text-xl font-bold">Yong Le He</h1>
 
@@ -120,7 +120,7 @@ const Header = ({
         </animated.div>
 
         <progress
-          className="progress progress-warning block h-1 rounded-none"
+          className="progress progress-accent block h-1 rounded-none"
           value={scrollPercentage}
           max={100}
         ></progress>

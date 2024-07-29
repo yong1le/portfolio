@@ -1,22 +1,24 @@
-import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+import "./globals.css";
 
-const font = Montserrat({ subsets: ['latin'], weight: ['400', '600'] })
+const font = Montserrat({ subsets: ["latin"], weight: ["400", "600"] });
 
 export const metadata: Metadata = {
-  title: 'Yong Le He',
-  description: 'Portfolio',
-}
+  title: "Yong Le He",
+  description: "Portfolio",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${font.className} bg-accent`}>{children}</body>
+    <html lang="en" data-theme="pastel">
+      <body className={`${font.className} bg-primary text-primary-content`}>
+        {children}
+      </body>
     </html>
-  )
+  );
 }

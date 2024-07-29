@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <div className="inset-0">
-      <div className="flex h-[90vh] min-h-fit items-center text-white">
+      <div className="flex h-[90vh] min-h-fit items-center">
         <IntroSection>
           <Header
             aboutID="AboutSection"
@@ -33,8 +33,8 @@ const Home = () => {
         </IntroSection>
       </div>
 
-      <div className="items-center rounded-t-[40px] bg-white px-10 text-black lg:px-48">
-        <div id="HeaderTrigger" className={`animate-pulse py-8 text-accent`}>
+      <div className="items-center rounded-t-[40px] bg-secondary px-10 text-secondary-content lg:px-48">
+        <div id="HeaderTrigger" className={`animate-pulse py-8 text-primary`}>
           <IoCaretDownOutline className="h-6 w-full" />
         </div>
         <div id="AboutSection" className="h-screen">
@@ -47,12 +47,12 @@ const Home = () => {
 
       <div
         id="SkillsSection"
-        className="flex min-h-screen flex-col items-center justify-center bg-white py-10 text-black"
+        className="flex min-h-screen flex-col items-center justify-center bg-secondary py-10 text-secondary-content"
       >
         <SkillsSection skills={skills} projects={projects} />
       </div>
 
-      <div className="h-[300px] bg-accent text-amber-800">
+      <div className="h-[300px] bg-primary text-amber-800">
         <Footer />
       </div>
     </div>

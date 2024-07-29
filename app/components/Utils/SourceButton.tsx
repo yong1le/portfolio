@@ -4,7 +4,7 @@ import { FaGitAlt } from "react-icons/fa";
 const SourceButton = ({ href }: { href: string }) => {
   return (
     <Link href={href} target="_blank">
-      <div className="btn glass border-none bg-accent text-white hover:scale-110 hover:bg-accent">
+      <div className="btn glass btn-primary border-none bg-primary hover:scale-110">
         <FaGitAlt />
         <p>Source Code</p>
       </div>

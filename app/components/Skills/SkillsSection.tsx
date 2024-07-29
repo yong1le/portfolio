@@ -68,7 +68,7 @@ const ClearButton = ({
   };
   return (
     <button
-      className="btn btn-circle btn-lg border-none bg-accent text-white shadow-md shadow-black"
+      className="btn btn-circle btn-primary btn-lg border-none bg-primary shadow-sm shadow-black"
       onClick={clearQuery}
     >
       Clear
@@ -100,7 +100,7 @@ const Skills = ({
           <div key={i}>
             {query.includes(e) ? (
               <div
-                className={`btn glass bg-black text-white`}
+                className={`btn glass btn-secondary bg-secondary-content text-secondary`}
                 onClick={() => removeFromQuery(e)}
               >
                 <div className="flex flex-row items-center gap-2">
@@ -111,7 +111,7 @@ const Skills = ({
             ) : (
               <div
                 key={i}
-                className="btn glass btn-ghost"
+                className="btn btn-ghost"
                 onClick={() => {
                   addToQuery(e);
                 }}

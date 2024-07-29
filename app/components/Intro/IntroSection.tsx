@@ -6,8 +6,7 @@ import { FaLinkedin, FaFilePdf, FaGithub } from "react-icons/fa6";
 
 // children prop should only be used for header
 const IntroSection = ({ children }: { children: React.ReactNode }) => {
-  const buttonFormat =
-    "btn btn-lg btn-block btn-ghost hover:scale-110 max-w-[400px]";
+  const buttonFormat = "btn btn-lg btn-block hover:scale-110 max-w-[400px]";
 
   return (
     <div className="flex flex-col gap-10 px-6 transition-all lg:w-full lg:flex-row lg:items-center lg:justify-center lg:gap-16">
@@ -31,7 +30,7 @@ const IntroSection = ({ children }: { children: React.ReactNode }) => {
           alt="alt"
         />
         <Link
-          className={`${buttonFormat} bg-highlight hover:bg-highlight`}
+          className={`${buttonFormat} btn-accent`}
           href="/resume.pdf"
           target="_blank"
         >
@@ -39,7 +38,7 @@ const IntroSection = ({ children }: { children: React.ReactNode }) => {
           <p>Resume</p>
         </Link>
         <Link
-          className={`${buttonFormat} bg-blue-800 hover:bg-blue-800`}
+          className={`${buttonFormat} btn-info`}
           href="https://www.linkedin.com/in/yonglehe/"
           target="_blank"
         >
@@ -47,7 +46,7 @@ const IntroSection = ({ children }: { children: React.ReactNode }) => {
           <p>LinkedIn</p>
         </Link>
         <Link
-          className={`${buttonFormat} bg-[#000] hover:bg-[#000]`}
+          className={`${buttonFormat} btn-base-100`}
           href="https://github.com/yong1le"
           target="_blank"
         >
