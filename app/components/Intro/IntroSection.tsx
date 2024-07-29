@@ -46,7 +46,7 @@ const IntroSection = ({ children }: { children: React.ReactNode }) => {
           <p>LinkedIn</p>
         </Link>
         <Link
-          className={`${buttonFormat} btn-base-100`}
+          className={`${buttonFormat} bg-[#000] text-[#fff] hover:bg-[#000]`}
           href="https://github.com/yong1le"
           target="_blank"
         >
