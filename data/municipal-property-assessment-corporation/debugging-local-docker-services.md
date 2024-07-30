@@ -48,15 +48,15 @@ that would cause minimal friction for developers.
 This method allowed us to run a debugger on any of our services whenever we
 needed. Since the service would always be ready to connect to a debugger, we did
 not need to restart any of the services when debugging them. This proved to be
-a very helpful feature, as our system is large and complication, the debugger
+a very helpful feature, as our system is large and complicated, the debugger
 has made it much simpler to follow the execution flow of many operations in
 later development.
 
 ---
 
-If I were given another chance at this artifact, I would choose to also look
+If I were to work on this artifact again, I would choose to look
 for performance optimizations in this workflow. Although the overhead is usually
-negligible, there were some occasions where much of my machine's CPU was taken
+negligible, there were some occasions where much of the CPU on my machine was taken
 up by the debugger.
 While developing this artifact, I learned the importance of complying to
 industry standards and common patterns. Although niche solutions may seem to
