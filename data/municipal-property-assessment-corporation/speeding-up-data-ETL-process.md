@@ -32,11 +32,17 @@ I was tasked with optimizing the ETL process to reduce the time it took to compl
    available on AWS are nowhere as powerful compared to my local machine. For this reason, the processing took
    **10 hours** on the production environment.
 3. After finding out about this CPU bottleneck, I started looking into using multiprocessing techniques to
-   parallelize the processing. After 2 more attempts, I was able to bring the processing time down to **3 hour**,
+   parallelize the processing. After 2 more attempts, I was able to bring the processing time down to **3 hours**,
    while maintaining the correctness of the script.
 
 ## Result
 
-The optimized ETL process significantly reduced the time it took to complete the ETL process. The new process completed in a fraction of the time it took compared to the old process. The improved performance of the ETL process had a positive impact on the business's operations, enabling a faster feedback loop.
+The optimized ETL process significantly reduced the time it took us to prepare all the data in our environments.
+The new process completed in a fraction of the time it took compared to the old process. The improved performance
+of the ETL process had a positive impact on the business's operations, enabling a faster feedback loop.
 
 ---
+
+If I were to work on this artifact again, I would choose to start with the multiprocessing techniques from the beginning.
+It was a massive overhaul to refactor my script to use `pandas`, then also try to parallelize it, and I could have saved
+time by starting with these performance considerations to begin with..
