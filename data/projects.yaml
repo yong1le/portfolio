@@ -1,3 +1,25 @@
+- title: Tush
+  description:
+    An image processing toolbox built using NextJS that can perform various
+    image processing tasks. The app utilizes S3 object storage and AWS lambda
+    for image processing.
+  highlightTags:
+    - NextJS
+    - AWS
+    - Python
+    - Auth
+  tags:
+    - HTML
+    - CSS
+    - JavaScript
+    - TypeScript
+    - GIT
+    - Web
+  sourceURL: "https://github.com/yong1le/tush"
+  demoURL: "https://tush-image.vercel.app"
+  image: "/images/projects/tush.png"
+  main: true
+
 - title: GoHere Demo
   description:
     A mobile application built with React Native to provide directions to
@@ -66,7 +88,7 @@
   sourceURL: "https://github.com/yong1le/utscacf-website"
   demoURL: "https://utscacf.vercel.app/home"
   image: /images/projects/acf.png
-  main: true
+  main: false
 
 - title: Javan's Mall
   description:

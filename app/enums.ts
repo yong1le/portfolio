@@ -30,4 +30,5 @@ export enum Skill {
   EXPRESS_JS = "ExpressJS",
   MOBILE_DEVELOPMENT = "Mobile Development",
   REACT_NATIVE = "React Native",
+  AWS = "AWS",
 }

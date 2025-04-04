@@ -20,7 +20,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import { FaGolang, FaJava, FaAndroid, FaLock } from "react-icons/fa6";
+import { FaGolang, FaJava, FaAndroid, FaLock, FaAws } from "react-icons/fa6";
 import { RiSupabaseFill } from "react-icons/ri";
 import { MdManageAccounts } from "react-icons/md";
 import { HiOutlineStatusOnline } from "react-icons/hi";
@@ -128,6 +128,9 @@ const SkillIcons = ({ skill }: { skill: Skill }) => {
       break;
     case Skill.REACT_NATIVE:
       skillIcon = <TbBrandReactNative />;
+      break;
+    case Skill.AWS:
+      skillIcon = <FaAws />
       break;
     default:
       skillIcon = <ImFileEmpty />;
