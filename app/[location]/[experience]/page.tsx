@@ -12,15 +12,17 @@ const Experience = ({
   const content = fs.readFileSync(contentPath, "utf8");
 
   return (
-    <div>
+    <div className="flex w-full flex-col">
       <Link
         href={`/${params.location}`}
-        className="btn btn-primary mb-10 text-xl font-bold hover:scale-110"
+        className="btn btn-primary mb-10 text-xl font-bold hover:scale-110 self-start"
       >
         BACK
       </Link>
-      <div className="prose prose-a:text-primary prose-img:rounded-xl prose-img:border prose-img:border-primary">
-        <MDXRemote source={content} />
+      <div className="w-fit self-center">
+        <div className="prose prose-a:text-primary prose-img:rounded-xl prose-img:border prose-img:border-primary">
+          <MDXRemote source={content} />
+        </div>
       </div>
     </div>
   );
