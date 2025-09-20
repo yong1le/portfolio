@@ -14,7 +14,8 @@ cd portfolio
 Run the server
 
 ```sh
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000]() on your computer.
