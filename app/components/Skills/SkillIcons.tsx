@@ -130,7 +130,7 @@ const SkillIcons = ({ skill }: { skill: Skill }) => {
       skillIcon = <TbBrandReactNative />;
       break;
     case Skill.AWS:
-      skillIcon = <FaAws />
+      skillIcon = <FaAws />;
       break;
     default:
       skillIcon = <ImFileEmpty />;

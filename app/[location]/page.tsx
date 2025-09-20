@@ -1,6 +1,6 @@
 import fs from "fs";
-import Link from "next/link";
 import LinkedList from "../components/Utils/LinkList";
+import Link from "next/link";
 
 const Location = async ({ params }: { params: { location: string } }) => {
   const locationsDirectory = process.cwd() + `/data/${params.location}`;
