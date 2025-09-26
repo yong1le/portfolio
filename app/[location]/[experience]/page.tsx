@@ -15,7 +15,7 @@ const Experience = ({
     <div className="flex w-full flex-col">
       <Link
         href={`/${params.location}`}
-        className="btn btn-primary mb-10 text-xl font-bold hover:scale-110 self-start"
+        className="btn btn-primary mb-10 self-start text-xl font-bold hover:scale-110"
       >
         BACK
       </Link>
