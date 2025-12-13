@@ -1,5 +1,7 @@
 # Speeding Up Data ETL Process
 
+**Date: Nov 29, 2024**
+
 ![Performance benchmarks of different iterations of my ETL script](/images/mpac/data-etl.png)
 
 <span class="text-center">
